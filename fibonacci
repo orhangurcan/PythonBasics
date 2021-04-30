@@ -1,0 +1,11 @@
+# This codes is used to create a list consisting of Fibonacci numbers from 1 to 55 using control flow statements.
+
+my_list = list()
+for i in range(0,54):
+  if i < 2:
+    my_list.append(1)
+  else:
+     my_list.append(my_list[len(my_list) - 2] + my_list[len(my_list) - 1])
+     if max(my_list) == 55:
+       break
+print(my_list)
