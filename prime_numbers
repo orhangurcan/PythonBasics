@@ -1,0 +1,17 @@
+n = int(input("enter  a number"))
+n_list = list(range(n))
+nonprime_list = []
+for i in n_list:
+  if i < 2:
+    nonprime_list.append(i)
+  elif i == 2 or i == 3:
+    pass
+  else:
+    j = 2 
+    while j <= i / 2 :
+      if not i % j:
+        nonprime_list.append(i)
+        break
+      j+=1
+prime_list = [i for i in n_list if not i in nonprime_list]
+print(prime_list)
